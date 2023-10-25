@@ -18,7 +18,8 @@ dependencyResolutionManagement {
 //app/build.gradle
 dependencies {
     ...
-    implementation("com.github.hoonsa-lim:android-library-ui:1.0.0")
+    val version = "latest release tag"
+    implementation("com.github.hoonsa-lim:android-library-ui:$version")
 }
 
 ```
