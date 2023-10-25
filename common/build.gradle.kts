@@ -53,7 +53,7 @@ publishing {
                 from(components["release"])
 
                 groupId = "com.anythingsskyblue.android.library.ui"
-                artifactId = "util"
+                artifactId = "common"
                 version = "1.0"
             }
         }
