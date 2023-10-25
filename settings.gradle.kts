@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-library-ui"
 include(":app")
-include(":util")
+include(":common")
