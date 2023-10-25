@@ -2,7 +2,8 @@
 
 # android-library-ui
 ## Modules
-1. util
+1. common
+2. compose
 
 ## How to use
 ```kotlin
@@ -19,7 +20,10 @@ dependencyResolutionManagement {
 dependencies {
     ...
     val version = "latest release tag"
-    implementation("com.github.hoonsa-lim:android-library-ui:$version")
+    val module = "module name"
+    implementation("com.github.hoonsa-lim.android-library-ui:$module:$version")
+    
+    //ex) implementation("com.github.hoonsa-lim.android-library-ui:compose:1.0.0")
 }
 
 ```
