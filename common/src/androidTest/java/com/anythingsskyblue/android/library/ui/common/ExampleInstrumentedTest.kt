@@ -1,4 +1,4 @@
-package com.anythingsskyblue.android.library.ui.util
+package com.anythingsskyblue.android.library.ui.common
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

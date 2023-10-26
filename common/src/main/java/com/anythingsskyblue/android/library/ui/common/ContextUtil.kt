@@ -1,4 +1,4 @@
-package com.anythingsskyblue.android.library.ui.util
+package com.anythingsskyblue.android.library.ui.common
 
 import android.app.Activity
 import android.content.ActivityNotFoundException

@@ -23,7 +23,7 @@ import com.anythingsskyblue.android.library.ui.compose.PreventContinuousClick
 import com.anythingsskyblue.android.library.ui.compose.clickableNotContinuous
 import com.anythingsskyblue.android.library.ui.compose.get
 import com.anythingsskyblue.android.library.ui.ui.theme.AndroidlibraryuiTheme
-import com.anythingsskyblue.android.library.ui.util.ContextUtil
+import com.anythingsskyblue.android.library.ui.common.ContextUtil
 import kotlin.time.Duration.Companion.milliseconds
 
 class MainActivity : ComponentActivity() {
