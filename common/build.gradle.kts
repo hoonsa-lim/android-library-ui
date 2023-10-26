@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.anythingsskyblue.android.library.ui.util"
+    namespace = "com.anythingsskyblue.android.library.ui.common"
     compileSdk = 34
 
     defaultConfig {
@@ -23,9 +23,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    buildFeatures {
-        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
