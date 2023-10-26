@@ -59,12 +59,12 @@ class MyApplication: Application() {
     </application>
 ```
 ```xml
-    <!--set admob application id-->
+    <!--set admob application id to AndroidManifest.xml-->
     <application
         ...>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"/>
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
         ...
     </application>
 ```
