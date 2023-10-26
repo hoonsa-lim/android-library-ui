@@ -44,7 +44,7 @@ plugins {
 class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
-        MobileAds.initialize(this) {}
+        AdManager.initialize(this) {}
     }
 }
 ```
