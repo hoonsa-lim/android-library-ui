@@ -4,8 +4,10 @@
 ## Modules
 1. common
 2. compose
+3. admob
 
 ## How to use
+### dependencies
 ```kotlin
 //settings.gradle
 dependencyResolutionManagement {
@@ -26,4 +28,43 @@ dependencies {
     //ex) implementation("com.github.hoonsa-lim.android-library-ui:compose:1.0.0")
 }
 
+```
+
+### admob
+```kotlin
+//project/build.gradle.kts
+//project/build.gradle.kts
+plugins {
+    ...
+    val google_service_version = "x.x.x"
+    id("com.google.gms.google-services") version "$google_service_version" apply false
+}
+
+//initialize
+class MyApplication: Application() {
+    override fun onCreate() {
+        super.onCreate()
+        MobileAds.initialize(this) {}
+    }
+}
+```
+
+```xml
+    <!--set application to AndroidManifest.xml-->
+    <application
+        android:name=".MyApplication"
+        ...>
+
+        ...
+    </application>
+```
+```xml
+    <!--set admob application id-->
+    <application
+        ...>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"/>
+        ...
+    </application>
 ```

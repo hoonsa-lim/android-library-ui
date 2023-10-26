@@ -18,3 +18,4 @@ rootProject.name = "android-library-ui"
 include(":app-sample")
 include(":common")
 include(":compose")
+include(":admob")

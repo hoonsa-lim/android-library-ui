@@ -69,4 +69,5 @@ dependencies {
 
     implementation(project(":common"))
     implementation(project(":compose"))
+    implementation(project(":admob"))
 }
