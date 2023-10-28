@@ -7,6 +7,7 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.ComponentActivity
+import java.util.Locale
 
 object ContextUtil {
     fun findActivity(context: Context): Activity? {
@@ -62,7 +63,7 @@ object ContextUtil {
 
     fun applicationIdToDownloadUrl(
         applicationId: String,
-    ) = "https://play.google.com/store/apps/details?id=$applicationId"
+    ) = "https://play.google.com/store/apps/details?id=$applicationId&hl=${Locale.getDefault().language}"
 
     fun applicationIdToStoreUri(
         applicationId: String,
