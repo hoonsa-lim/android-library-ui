@@ -52,11 +52,27 @@ object ContextUtil {
         applicationId: String,
     ){
         try {
-            val uri = Uri.parse("market://details?id=$applicationId")
+            val uri = Uri.parse(applicationIdToStoreUri(applicationId))
             openUri(context, uri)
         } catch (e: ActivityNotFoundException) {
-            val uri = Uri.parse("https://play.google.com/store/apps/details?id=$applicationId")
+            val uri = Uri.parse(applicationIdToDownloadUrl(applicationId))
             openUri(context, uri)
         }
+    }
+
+    fun applicationIdToDownloadUrl(
+        applicationId: String,
+    ) = "https://play.google.com/store/apps/details?id=$applicationId"
+
+    fun applicationIdToStoreUri(
+        applicationId: String,
+    ) = "market://details?id=$applicationId"
+
+    fun shareText(context: Context, text: String){
+        val sharingIntent = Intent(Intent.ACTION_SEND)
+        sharingIntent.type = "text/plain"
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, text)
+
+        context.startActivity(Intent.createChooser(sharingIntent, "URL을 공유하기"))
     }
 }
