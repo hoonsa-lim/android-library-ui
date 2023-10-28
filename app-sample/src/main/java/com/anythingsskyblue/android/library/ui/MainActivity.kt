@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -41,8 +43,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    val scrollState = rememberScrollState()
                     Column(
-                        verticalArrangement = Arrangement.SpaceEvenly,
+                        modifier = Modifier.verticalScroll(scrollState),
+                        verticalArrangement = Arrangement.spacedBy(16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ){
                         Button(onClick = {
@@ -66,6 +70,10 @@ class MainActivity : ComponentActivity() {
                         }
 
                         SampleAdView(Modifier,this@MainActivity)
+
+                        Button(onClick = { ContextUtil.shareText(this@MainActivity, "https://www.google.com") }) {
+                            Text(text = "공유!!")
+                        }
                     }
                 }
             }
